@@ -28,18 +28,18 @@ expression: diagnostics
     suggestion: Remove whitespace after opening quotes
     fixable: true
   location:
-    row: 597
+    row: 604
     column: 4
   end_location:
-    row: 599
+    row: 606
     column: 13
   fix:
     content: ""
     location:
-      row: 597
+      row: 604
       column: 7
     end_location:
-      row: 599
+      row: 606
       column: 4
   parent: ~
 - kind:
@@ -48,18 +48,18 @@ expression: diagnostics
     suggestion: Remove whitespace after opening quotes
     fixable: true
   location:
-    row: 624
+    row: 631
     column: 4
   end_location:
-    row: 626
+    row: 633
     column: 14
   fix:
     content: ""
     location:
-      row: 624
+      row: 631
       column: 7
     end_location:
-      row: 626
+      row: 633
       column: 4
   parent: ~
 

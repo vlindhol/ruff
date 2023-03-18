@@ -519,10 +519,17 @@ def valid_google_string():  # noqa: D400
 def bad_google_string():  # noqa: D400
     """Test a valid something"""
 
+@expect("D415: First line should end with a period, question mark, "
+        "or exclamation point (not '\\')")
+def backslash_at_end_of_line():  # noqa: D400
+    """A pathological \
+    summary line.
+    """
+
 
 # This is reproducing a bug where AttributeError is raised when parsing class
 # parameters as functions for Google / Numpy conventions.
-class Blah:  # noqa: D203,D213
+class Blah:  # noqa: D203
     """A Blah.
 
     Parameters

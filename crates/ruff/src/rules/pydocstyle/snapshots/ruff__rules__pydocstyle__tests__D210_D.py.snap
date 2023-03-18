@@ -68,10 +68,10 @@ expression: diagnostics
     suggestion: Trim surrounding whitespace
     fixable: true
   location:
-    row: 581
+    row: 588
     column: 4
   end_location:
-    row: 581
+    row: 588
     column: 51
   fix: ~
   parent: ~

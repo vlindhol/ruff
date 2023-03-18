@@ -21,10 +21,10 @@ expression: diagnostics
     suggestion: ~
     fixable: false
   location:
-    row: 534
+    row: 541
     column: 8
   end_location:
-    row: 534
+    row: 541
     column: 16
   fix: ~
   parent: ~

@@ -44,9 +44,20 @@ impl Violation for BlankLineAfterSummary {
 pub fn blank_after_summary(checker: &mut Checker, docstring: &Docstring) {
     let body = docstring.body;
 
+    // Find the "summary" line (defined as the first non-blank line).
+    // The summary line may also be composed of multiple lines ending in
+    // a backslash, in that case find the last of those lines.
+    let mut summary_line = 1;
+    for line in body.universal_newlines() {
+        if line.trim().is_empty() || line.trim().ends_with('\\') {
+            summary_line += 1;
+        } else {
+            break;
+        }
+    }
     let mut lines_count = 1;
     let mut blanks_count = 0;
-    for line in body.trim().universal_newlines().skip(1) {
+    for line in body.trim().universal_newlines().skip(summary_line) {
         lines_count += 1;
         if line.trim().is_empty() {
             blanks_count += 1;
@@ -54,6 +65,9 @@ pub fn blank_after_summary(checker: &mut Checker, docstring: &Docstring) {
             break;
         }
     }
+
+    // This rule does not allow multi-line summaries (unless collapsed by ending the
+    // line in a backslash).
     if lines_count > 1 && blanks_count != 1 {
         let mut diagnostic = Diagnostic::new(
             BlankLineAfterSummary {
@@ -63,16 +77,6 @@ pub fn blank_after_summary(checker: &mut Checker, docstring: &Docstring) {
         );
         if checker.patch(diagnostic.kind.rule()) {
             if blanks_count > 1 {
-                // Find the "summary" line (defined as the first non-blank line).
-                let mut summary_line = 0;
-                for line in body.universal_newlines() {
-                    if line.trim().is_empty() {
-                        summary_line += 1;
-                    } else {
-                        break;
-                    }
-                }
-
                 // Insert one blank line after the summary (replacing any existing lines).
                 diagnostic.amend(Fix::replacement(
                     checker.stylist.line_ending().to_string(),

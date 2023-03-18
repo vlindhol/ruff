@@ -29,10 +29,10 @@ expression: diagnostics
   fix:
     content: "\n"
     location:
-      row: 211
+      row: 212
       column: 0
     end_location:
-      row: 213
+      row: 214
       column: 0
   parent: ~
 

@@ -248,18 +248,18 @@ expression: diagnostics
     suggestion: Add period
     fixable: true
   location:
-    row: 581
+    row: 588
     column: 4
   end_location:
-    row: 581
+    row: 588
     column: 51
   fix:
     content: "."
     location:
-      row: 581
+      row: 588
       column: 47
     end_location:
-      row: 581
+      row: 588
       column: 47
   parent: ~
 - kind:
@@ -268,18 +268,18 @@ expression: diagnostics
     suggestion: Add period
     fixable: true
   location:
-    row: 615
+    row: 622
     column: 4
   end_location:
-    row: 617
+    row: 624
     column: 7
   fix:
     content: "."
     location:
-      row: 615
+      row: 622
       column: 14
     end_location:
-      row: 615
+      row: 622
       column: 14
   parent: ~
 

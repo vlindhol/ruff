@@ -48,18 +48,18 @@ expression: diagnostics
     suggestion: Remove blank line(s) before function docstring
     fixable: true
   location:
-    row: 546
+    row: 553
     column: 4
   end_location:
-    row: 549
+    row: 556
     column: 7
   fix:
     content: ""
     location:
-      row: 545
+      row: 552
       column: 0
     end_location:
-      row: 546
+      row: 553
       column: 0
   parent: ~
 - kind:
@@ -68,18 +68,18 @@ expression: diagnostics
     suggestion: Remove blank line(s) before function docstring
     fixable: true
   location:
-    row: 568
+    row: 575
     column: 4
   end_location:
-    row: 571
+    row: 578
     column: 7
   fix:
     content: ""
     location:
-      row: 567
+      row: 574
       column: 0
     end_location:
-      row: 568
+      row: 575
       column: 0
   parent: ~
 

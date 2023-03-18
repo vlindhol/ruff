@@ -308,18 +308,38 @@ expression: diagnostics
     suggestion: Insert line break and indentation after opening quotes
     fixable: true
   location:
-    row: 526
+    row: 525
     column: 4
   end_location:
-    row: 532
+    row: 527
+    column: 7
+  fix:
+    content: "\n    A pathological \\"
+    location:
+      row: 525
+      column: 7
+    end_location:
+      row: 525
+      column: 23
+  parent: ~
+- kind:
+    name: MultiLineSummarySecondLine
+    body: Multi-line docstring summary should start at the second line
+    suggestion: Insert line break and indentation after opening quotes
+    fixable: true
+  location:
+    row: 533
+    column: 4
+  end_location:
+    row: 539
     column: 7
   fix:
     content: "\n    A Blah."
     location:
-      row: 526
+      row: 533
       column: 7
     end_location:
-      row: 526
+      row: 533
       column: 14
   parent: ~
 - kind:
@@ -328,18 +348,18 @@ expression: diagnostics
     suggestion: Insert line break and indentation after opening quotes
     fixable: true
   location:
-    row: 546
+    row: 553
     column: 4
   end_location:
-    row: 549
+    row: 556
     column: 7
   fix:
     content: "\n    Leading space."
     location:
-      row: 546
+      row: 553
       column: 7
     end_location:
-      row: 546
+      row: 553
       column: 21
   parent: ~
 - kind:
@@ -348,18 +368,18 @@ expression: diagnostics
     suggestion: Insert line break and indentation after opening quotes
     fixable: true
   location:
-    row: 555
+    row: 562
     column: 4
   end_location:
-    row: 558
+    row: 565
     column: 7
   fix:
     content: "\n    Leading space."
     location:
-      row: 555
+      row: 562
       column: 7
     end_location:
-      row: 555
+      row: 562
       column: 21
   parent: ~
 - kind:
@@ -368,18 +388,18 @@ expression: diagnostics
     suggestion: Insert line break and indentation after opening quotes
     fixable: true
   location:
-    row: 568
+    row: 575
     column: 4
   end_location:
-    row: 571
+    row: 578
     column: 7
   fix:
     content: "\n    Trailing and leading space."
     location:
-      row: 568
+      row: 575
       column: 7
     end_location:
-      row: 568
+      row: 575
       column: 34
   parent: ~
 - kind:
@@ -388,18 +408,18 @@ expression: diagnostics
     suggestion: Insert line break and indentation after opening quotes
     fixable: true
   location:
-    row: 588
+    row: 595
     column: 4
   end_location:
-    row: 590
+    row: 597
     column: 21
   fix:
     content: "\n    Summary."
     location:
-      row: 588
+      row: 595
       column: 7
     end_location:
-      row: 588
+      row: 595
       column: 15
   parent: ~
 - kind:
@@ -408,18 +428,18 @@ expression: diagnostics
     suggestion: Insert line break and indentation after opening quotes
     fixable: true
   location:
-    row: 606
+    row: 613
     column: 4
   end_location:
-    row: 608
+    row: 615
     column: 7
   fix:
     content: "\n    Wrong."
     location:
-      row: 606
+      row: 613
       column: 8
     end_location:
-      row: 606
+      row: 613
       column: 14
   parent: ~
 - kind:
@@ -428,18 +448,18 @@ expression: diagnostics
     suggestion: Insert line break and indentation after opening quotes
     fixable: true
   location:
-    row: 615
+    row: 622
     column: 4
   end_location:
-    row: 617
+    row: 624
     column: 7
   fix:
     content: "\n    Wrong.\""
     location:
-      row: 615
+      row: 622
       column: 7
     end_location:
-      row: 615
+      row: 622
       column: 14
   parent: ~
 

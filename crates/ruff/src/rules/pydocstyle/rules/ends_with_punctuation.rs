@@ -64,6 +64,7 @@ pub fn ends_with_punctuation(checker: &mut Checker, docstring: &Docstring) {
             if checker.patch(diagnostic.kind.rule())
                 && !trimmed.ends_with(':')
                 && !trimmed.ends_with(';')
+                && !trimmed.ends_with('\\')
             {
                 if let Some((row, column)) = if index == 0 {
                     leading_quote(contents).map(|pattern| {
